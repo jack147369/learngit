@@ -98,8 +98,8 @@ public class SchoolSystem {
 					System.out.println("false");
 				}
 			}
-		   System.out.println("大班剩余名额"+a.getbig());/
-		   System.out.println("中班剩余名额"+a.getmedium());/
+		   System.out.println("大班剩余名额"+a.getbig());
+		   System.out.println("中班剩余名额"+a.getmedium());
 		   System.out.println("小班剩余名额"+a.getsmall());/
 	   }
 
