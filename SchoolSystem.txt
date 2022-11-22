@@ -1,0 +1,117 @@
+package project;
+
+import java.util.Scanner;
+
+public class SchoolSystem {
+	
+	int big;
+	int medium;
+	int small;
+	
+	SchoolSystem(int nb,int nm,int ns)
+	{
+		big=nb;
+		medium=nm;
+		small=ns;				
+	}
+	
+	   public int getbig() {
+	        return big;
+	    }
+
+	   public void setbig(int big) {
+	        this.big = big;
+	    }
+	   
+	   public int getmedium() {
+	        return medium;
+	    }
+
+	   public void setmedium(int medium) {
+	        this.medium = medium;
+	    }
+	   
+	   public int getsmall() {
+	        return small;
+	    }
+
+	   public void setsmall(int small) {
+	        this.small = small;
+	    } 
+	   
+	   public void addStudent(int stuType)
+	   {
+		   
+	   }
+	   
+	   public void choose() {
+		   
+		    System.out.println("请输入您的选择：");
+			System.out.println("1.大班");
+			System.out.println("2.中班");
+			System.out.println("3.小班");
+			
+
+	   }
+	   public void welcome(SchoolSystem a)
+	   {
+		   Scanner sc=new Scanner(System.in);
+			
+		   int number = sc.nextInt();
+		   
+		   if(number==1)
+			{
+				int i =a.getbig();
+				if(a.getbig()!=0)
+				{
+				a.setbig(i-1);
+				System.out.println("true");
+				}
+				else
+				{
+					System.out.println("false");
+				}
+			}
+		   if(number==2)
+			{
+				int i =a.getmedium();
+				if(a.getmedium()!=0)
+				{
+				a.setmedium(i-1);
+				System.out.println("true");
+				}
+				else
+				{
+					System.out.println("false");
+				}
+			}
+		   if(number==3)
+			{
+				int i =a.getsmall();
+				if(a.getsmall()!=0)
+				{
+				a.setsmall(i-1);
+				System.out.println("true");
+				}
+				else
+				{
+					System.out.println("false");
+				}
+			}
+		   System.out.println("大班剩余名额"+a.getbig());
+		   System.out.println("中班剩余名额"+a.getmedium());
+		   System.out.println("小班剩余名额"+a.getsmall());
+	   }
+
+	public static void main(String[] args) {
+		
+		SchoolSystem a =new SchoolSystem(2,2,1);//初始化
+		
+		while(true)
+		{
+	    a.choose();
+	    
+	    a.welcome(a);
+		}
+	}
+}
